@@ -56,7 +56,7 @@ function NavBar  () {
                     "
                     onClick={() => (setFlyer(!flyer), setFlyerTwo(false))}
                   >
-                    <span>About Us</span>
+                    <span>Services</span>
                     <svg
                       className={
                         flyer === true
@@ -75,29 +75,18 @@ function NavBar  () {
                       />
                     </svg>
                   </button>
-                  {/*
-              'Solutions' flyout menu, show/hide based on flyout menu state.
-  
-              Entering: "transition ease-out duration-200"
-                From: "opacity-0 translate-y-1"
-                To: "opacity-100 translate-y-0"
-              Leaving: "transition ease-in duration-150"
-                From: "opacity-100 translate-y-0"
-                To: "opacity-0 translate-y-1"
-            */}
-  
-                  <div
+                   <div
                     onMouseLeave={() => setFlyer(false)}
                     className={
                       flyer
                         ? " opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                         : " opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                     }
-                  >
+                    >
                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                         <a
-                          href="#"
+                          href="/services"
                           className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                         >
                           {/* Heroicon name: outline/chart-bar */}
@@ -118,7 +107,7 @@ function NavBar  () {
                           </svg>
                           <div className="ml-4">
                             <p className="text-base font-medium text-gray-900">
-                              Analytics
+                              Services
                             </p>
                             <p className="mt-1 text-sm text-gray-500">
                               Get a better understanding of where your traffic is
@@ -130,7 +119,6 @@ function NavBar  () {
                           href="#"
                           className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                         >
-                          {/* Heroicon name: outline/cursor-click */}
                           <svg
                             className="flex-shrink-0 h-6 w-6 text-indigo-600"
                             xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +148,6 @@ function NavBar  () {
                           href="#"
                           className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                         >
-                          {/* Heroicon name: outline/shield-check */}
                           <svg
                             className="flex-shrink-0 h-6 w-6 text-indigo-600"
                             xmlns="http://www.w3.org/2000/svg"
@@ -189,7 +176,6 @@ function NavBar  () {
                           href="#"
                           className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                         >
-                          {/* Heroicon name: outline/view-grid */}
                           <svg
                             className="flex-shrink-0 h-6 w-6 text-indigo-600"
                             xmlns="http://www.w3.org/2000/svg"
@@ -219,7 +205,6 @@ function NavBar  () {
                           href="#"
                           className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                         >
-                          {/* Heroicon name: outline/refresh */}
                           <svg
                             className="flex-shrink-0 h-6 w-6 text-indigo-600"
                             xmlns="http://www.w3.org/2000/svg"
@@ -252,7 +237,6 @@ function NavBar  () {
                             href="#"
                             className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                           >
-                            {/* Heroicon name: outline/play */}
                             <svg
                               className="flex-shrink-0 h-6 w-6 text-gray-400"
                               xmlns="http://www.w3.org/2000/svg"
@@ -282,7 +266,6 @@ function NavBar  () {
                             href="#"
                             className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                           >
-                            {/* Heroicon name: outline/phone */}
                             <svg
                               className="flex-shrink-0 h-6 w-6 text-gray-400"
                               xmlns="http://www.w3.org/2000/svg"
@@ -307,16 +290,16 @@ function NavBar  () {
                 </div>
   
                 <a
-                  href="#"
+                  href="/about-us"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
-                  Pricing
+                  About us
                 </a>
                 <a
-                  href="#"
+                  href="/contact-us"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
-                  Docs
+                  Contact Us
                 </a>
                 <div className="relative">
                   {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
@@ -544,8 +527,8 @@ function NavBar  () {
           <div
             className={
               open
-                ? "opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-                : "opacity-0 scale-95 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                ? "opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-10"
+                : "opacity-0 scale-95 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-10"
             }
           >
             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
@@ -588,7 +571,7 @@ function NavBar  () {
                   <nav className="grid gap-y-8">
                     <a
                       href="#"
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 z-10"
                     >
                       {/* Heroicon name: outline/chart-bar */}
                       <svg
@@ -607,7 +590,7 @@ function NavBar  () {
                         />
                       </svg>
                       <span className="ml-3 text-base font-medium text-gray-900">
-                        Analytics
+                        Services
                       </span>
                     </a>
                     <a
@@ -712,16 +695,16 @@ function NavBar  () {
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                   <a
-                    href="#"
+                    href="/about-us"
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
-                    Pricing
+                    About Us
                   </a>
                   <a
-                    href="#"
+                    href="/contact-us"
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
-                    Docs
+                    Contact us
                   </a>
                   <a
                     href="#"
